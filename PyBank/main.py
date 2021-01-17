@@ -34,7 +34,7 @@ for x in range(len(p_l) - 1):
     change = p_l[x+1] - p_l[x]
     # Append all monthly changes to a list
     changes.append(change)
-print(len(p_l))
+
 # Calculate the average change
 avg_change = sum(changes) / len(changes)
 
