@@ -29,13 +29,11 @@ with open(budget_path, 'r', newline='') as csvfile:
         p_l.append(int(row[1]))
 
 # Loop through each recorded "Profit/Loss" in the budget data
-for x in range(len(p_l)):
-    # Create a condition to prevent the loop from indexing out of range
-    if x < len(p_l) - 1:
-        # Calculate month to month change
-        change = p_l[x+1] - p_l[x]
-        # Append all monthly changes to a list
-        changes.append(change)
+for x in range(len(p_l) - 1):
+    # Calculate month to month change
+    change = p_l[x+1] - p_l[x]
+    # Append all monthly changes to a list
+    changes.append(change)
 
 # Calculate the average change
 avg_change = sum(changes) / len(changes)
